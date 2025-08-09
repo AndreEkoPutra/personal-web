@@ -1,7 +1,7 @@
 function Header() {
   return (
-    <header>
-        <div className="relative flex items-center justify-center h-16 bg-indigo-950">
+    <header className="sticky top-0">
+        <div className="relative flex items-center justify-center h-16 bg-black shadow-lg">
             <div className="absolute left-0 px-3">
                 <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-100">Andreanus Eko Putra</h1>
             </div>

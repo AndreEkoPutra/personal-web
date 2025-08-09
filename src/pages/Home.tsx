@@ -10,8 +10,8 @@ function Home() {
             </div>
             <div>
                 <ul className="flex items-center justify-center space-x-5 py-4">
-                    <li><a href="#projects">View Project</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li className="px-4 py-1 rounded-lg border border-white font-bold text-blue-300 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-100 hover:text-black transition-colors duration-300 cursor-pointer"><a href="#projects">View Project</a></li>
+                    <li className="px-4 py-1 rounded-lg border border-white font-bold text-blue-300 hover:bg-gradient-to-r hover:from-indigo-400 hover:to-indigo-100 hover:text-black transition-colors duration-300 cursor-pointer"><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
         </div>
