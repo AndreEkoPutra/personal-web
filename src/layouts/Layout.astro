@@ -1,22 +1,48 @@
 ---
 import "../styles/global.css";
+const year = new Date().getFullYear();
+
+const navigation = [
+	{ label: "Home", href: "/" },
+	{ label: "About", href: "/about" },
+	{ label: "Articles", href: "/articles" },
+	{ label: "Portfolio", href: "/portfolio" },
+	{ label: "Contact", href: "/contact" },
+]
 ---
 
 <!doctype html>
 <html lang="en" class="w-full h-full">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="w-full h-full">
+		<header class="flex items-center justify-between px-4 py-4 max-md:flex-col max-md:gap-4">
+			<h1 class="font-semibold">Astro Basics</h1>
+			<nav class="gap-4 flex items-center justify-center">
+				{navigation.map((item) => (
+					<a href={item.href}>
+						{item.label}
+					</a>
+				))
+				}
+			</nav>
+			<button class="rounded-lg text-black font-semibold">
+				<a href="https://docs.astro.build">Read our docs</a>
+			</button>
+		</header>
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+		<slot />
 
-    <meta name="generator" content={Astro.generator} />
-
-    <title>Astro Basics</title>
-  </head>
-
-  <body class="w-full h-full m-0">
-    <slot />
-  </body>
+		<footer class="mt-10 border-t py-6 text-center">
+		<p class="text-sm text-gray-500">
+			© {year} Andreanus Eko Putra. All rights reserved.
+		</p>
+		</footer>
+	</body>
 </html>
